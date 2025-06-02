@@ -1,0 +1,9 @@
+.navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}

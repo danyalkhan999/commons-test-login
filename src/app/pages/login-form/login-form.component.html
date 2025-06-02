@@ -1,0 +1,42 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="w-100" appearance="outline">
+    <mat-label>Email Address</mat-label>
+    <input
+      matInput
+      formControlName="email"
+      placeholder="Enter your email"
+      type="email"
+    />
+    <mat-error
+      *ngIf="emailControl.hasError('required') && emailControl.touched"
+    >
+      Email is required
+    </mat-error>
+    <mat-error *ngIf="emailControl.hasError('email') && emailControl.touched">
+      Enter a valid email
+    </mat-error>
+  </mat-form-field>
+
+  <button
+    mat-flat-button
+    color="primary"
+    class="w-100 my-3"
+    [disabled]="loginForm.invalid"
+  >
+    Continue
+  </button>
+
+  <p class="text-muted small">
+    By continuing, you agree to the
+    <a href="#" class="text-decoration-underline">Platform Commons License</a>.
+  </p>
+
+  <hr />
+
+  <button mat-stroked-button color="primary" class="w-100 mb-2" type="button">
+    <mat-icon>login</mat-icon> &nbsp; Sign In with Google
+  </button>
+  <button mat-stroked-button color="accent" class="w-100" type="button">
+    <mat-icon>security</mat-icon> &nbsp; Sign In with SH SSO
+  </button>
+</form>

@@ -1,0 +1,27 @@
+<c-carousel
+  [interval]="5000"
+  transition="slide"
+  class="carousel-fade w-100 h-100"
+>
+  <c-carousel-indicators />
+
+  <c-carousel-inner>
+    @for (slide of slides; track slide.id) {
+    <c-carousel-item>
+      <img
+        src="{{ slide.src }}"
+        alt="{{ slide.title }}"
+        class="d-block w-100 h-view object-fit-cover"
+        loading="lazy"
+      />
+      <c-carousel-caption class="text-white bg-opacity-50">
+        <h3 class="fw-bold">{{ slide.title }}</h3>
+        <p class="mb-0">{{ slide.subtitle }}</p>
+      </c-carousel-caption>
+    </c-carousel-item>
+    }
+  </c-carousel-inner>
+
+  <c-carousel-control direction="prev" caption="Previous" />
+  <c-carousel-control direction="next" caption="Next" />
+</c-carousel>

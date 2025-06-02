@@ -1,0 +1,38 @@
+.h-view {
+    height: 100vh;
+}
+
+:host {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.c-carousel,
+.carousel-inner,
+.carousel-item,
+img {
+    height: 100%;
+}
+
+img {
+    object-fit: cover;
+}
+
+.c-carousel-caption {
+    bottom: 15%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.c-carousel-indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}

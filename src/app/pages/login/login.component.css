@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+    .vh-100 {
+        height: auto !important;
+    }
+
+    .w-75 {
+        width: 90% !important;
+    }
+
+    .col-md-6.d-none.d-md-flex {
+        display: none !important;
+    }
+}
